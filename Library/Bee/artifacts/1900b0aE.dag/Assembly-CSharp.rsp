@@ -320,9 +320,16 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
+<<<<<<< Updated upstream
 "Assets/Scripts/Interactives/ButtonClass.cs"
 "Assets/Scripts/Interactives/CoinClass.cs"
 "Assets/Scripts/Interactives/TeleportClass.cs"
+=======
+"Assets/Scripts/Audio/AudioManager.cs"
+"Assets/Scripts/Audio/Sound.cs"
+"Assets/Scripts/Interactives/ButtonClass.cs"
+"Assets/Scripts/Interactives/CoinClass.cs"
+>>>>>>> Stashed changes
 "Assets/Scripts/MainMenuScript/MainMenuScript.cs"
 "Assets/Scripts/Player/PlayerClass.cs"
 "Assets/Scripts/Player/PlayerInputKeys.cs"
