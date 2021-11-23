@@ -325,11 +325,12 @@
 "Assets/Scripts/Interactives/ButtonClass.cs"
 "Assets/Scripts/Interactives/CoinClass.cs"
 "Assets/Scripts/Interactives/TeleportClass.cs"
-"Assets/Scripts/MainMenuScript/MainMenuScript.cs"
 "Assets/Scripts/Player/PlayerClass.cs"
 "Assets/Scripts/Player/PlayerInputKeys.cs"
 "Assets/Scripts/Player/PlayerTwoClass.cs"
 "Assets/Scripts/QuitGameScript.cs"
+"Assets/Scripts/UI/MainMenuScript/MainMenuScript.cs"
+"Assets/Scripts/UI/PauseMenu.cs"
 -langversion:8.0
 
 /deterministic
