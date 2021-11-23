@@ -6,7 +6,7 @@ public class TeleportClass : MonoBehaviour
 {
     public bool shouldTeleport;
 
-    public float[3] position;
+    public float[] position = new float[3];
 
     private void OnCollisionEnter(Collision player)
     {
