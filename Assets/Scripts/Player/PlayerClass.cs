@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerClass : MonoBehaviour
 {
@@ -17,12 +18,34 @@ public class PlayerClass : MonoBehaviour
     private bool isGrounded;
     private Vector3 velocity;
 
-    void Start()
+    private PlayerInputKeys playerInputKeys;
+    private InputAction inputAction;
+
+    private void Awake()
     {
+        playerInputKeys = new PlayerInputKeys();
+    }
+
+    private void OnEnable()
+    {
+        inputAction = playerInputKeys.PlayerInput.Movement;
+        inputAction.Enable();
+
+        playerInputKeys.PlayerInput.Movement.Enable();
+    }
+    private void OnDisable()
+    {
+        inputAction.Disable();
+        playerInputKeys.PlayerInput.Movement.Disable();
     }
 
     void Update()
     {
+        Vector2 vecInput = playerInputKeys.PlayerInput.Movement.ReadValue<Vector2>();
+
+        Vector3 Movement = new Vector3(vecInput.x, 0.0f, vecInput.y);
+        transform.position += Movement * speed * Time.deltaTime;
+        /*
         float xDir = Input.GetAxis("Horizontal");
         float yDir = Input.GetAxis("Vertical");
 
@@ -41,7 +64,6 @@ public class PlayerClass : MonoBehaviour
 
         transform.position += Movement * speed * Time.deltaTime;
         transform.position += velocity * Time.deltaTime;
-
-
+        */
     }
 }
