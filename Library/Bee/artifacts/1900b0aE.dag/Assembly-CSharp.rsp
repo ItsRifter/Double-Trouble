@@ -106,6 +106,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_INPUT_SYSTEM
+-define:ENABLE_LEGACY_INPUT_MANAGER
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/2021.1.26f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll"
@@ -326,7 +327,11 @@
 "Assets/Scripts/EndGameButtonScriptPlayer2.cs"
 "Assets/Scripts/Interactives/ButtonClass.cs"
 "Assets/Scripts/Interactives/CoinClass.cs"
+"Assets/Scripts/Interactives/DoorScript.cs"
+"Assets/Scripts/Interactives/ItemScript.cs"
+"Assets/Scripts/Interactives/PickUpObject.cs"
 "Assets/Scripts/Interactives/PressurePlateScript.cs"
+"Assets/Scripts/Interactives/ScriptForKey.cs"
 "Assets/Scripts/Interactives/TeleportClass.cs"
 "Assets/Scripts/Interactives/UniquePressurePlateScript.cs"
 "Assets/Scripts/Player/PlayerClass.cs"

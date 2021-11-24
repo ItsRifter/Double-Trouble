@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - Placeable
+  - Key
+  - Player2
   layers:
   - Default
   - TransparentFX
