@@ -8,8 +8,7 @@ public class UniquePressurePlateScript : MonoBehaviour
     GameObject door1ToClose;
     [SerializeField]
     GameObject door2ToClose;
-    [SerializeField]
-    GameObject door1ToOpen;
+    
     [SerializeField]
     GameObject door2ToOpen;
 
@@ -24,7 +23,7 @@ public class UniquePressurePlateScript : MonoBehaviour
         {
             // if (col.GetComponent<Collider>().tag == "Player" || col.GetComponent<Collider>().tag == "Placeable")
             //{
-                door1ToOpen.transform.position += new Vector3(0, 0, doorCloseAmount);
+               
                 door2ToOpen.transform.position += new Vector3(0, 0, doorCloseAmount);
 
                 door1ToClose.transform.position -= new Vector3(0, 0, doorCloseAmount);
@@ -53,7 +52,7 @@ public class UniquePressurePlateScript : MonoBehaviour
             Debug.Log("Move door");
             isUniquePressurePlateOn = false;
 
-            door1ToOpen.transform.position -= new Vector3(0, 0, doorCloseAmount);
+            
             door2ToOpen.transform.position -= new Vector3(0, 0, doorCloseAmount);
 
             door1ToClose.transform.position += new Vector3(0, 0, doorCloseAmount);

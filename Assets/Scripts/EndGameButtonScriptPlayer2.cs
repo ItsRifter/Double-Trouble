@@ -24,6 +24,7 @@ public class EndGameButtonScriptPlayer2 : MonoBehaviour
         }
         if (EGBSP1.isPlayer1Near)
         {
+            Application.Quit();
             Debug.Log("End Game");
         }
 

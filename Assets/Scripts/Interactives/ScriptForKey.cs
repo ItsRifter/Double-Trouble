@@ -9,6 +9,8 @@ public class ScriptForKey : MonoBehaviour
     bool isPlayer1HoldingItem = false;
     bool isPlayer2HoldingItem = false;
     public DoorScript doorToUnlock;
+    public bool isPlayer1TeleportedItem = false;
+    public bool isPlayer2TeleportedItem = false;
 
 
     void OnTriggerEnter(Collider col)
@@ -16,6 +18,7 @@ public class ScriptForKey : MonoBehaviour
         if (col.GetComponent<Collider>().tag == "Player")
         {
             isPlayer1HoldingItem = true;
+            Debug.Log("bruh");
         }
 
         if (col.GetComponent<Collider>().tag == "Player2")
@@ -23,10 +26,6 @@ public class ScriptForKey : MonoBehaviour
             isPlayer2HoldingItem = true;
         }
 
-    }
-
-    void Update()
-    {
         if (isPlayer1HoldingItem == true)
         {
             GetComponent<Rigidbody>().useGravity = false;
@@ -40,6 +39,12 @@ public class ScriptForKey : MonoBehaviour
             this.transform.position = itemDest2.position;
             this.transform.parent = GameObject.Find("ItemZone2").transform;
         }
+
+    }
+
+    void Update()
+    {
+     
 
         if (Input.GetKeyDown(KeyCode.E))
         {
@@ -67,6 +72,24 @@ public class ScriptForKey : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+
+        if (isPlayer1TeleportedItem == true)
+        {
+            this.transform.parent = null;
+            GetComponent<Rigidbody>().useGravity = true;
+            isPlayer1HoldingItem = false;
+            isPlayer1TeleportedItem = false;
+        }
+
+        if (isPlayer2TeleportedItem == true)
+        {
+            this.transform.parent = null;
+            GetComponent<Rigidbody>().useGravity = true;
+            isPlayer2HoldingItem = false;
+            isPlayer2TeleportedItem = false;
+        }
+
     }
+
 
 }
